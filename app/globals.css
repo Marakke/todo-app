@@ -3,15 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --hover: #1b2f54;
 }
 
 body {
@@ -24,8 +18,27 @@ a {
   @apply underline;
 }
 
+input {
+  color: var(--background)
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.todo:hover {
+  background-color: var(--hover);
+}
+
+.primary-button {
+  background-color: var(--background);
+  border-color: var(--foreground);
+  color: var(--foreground);
+}
+
+.primary-button:hover {
+  background-color: var(--hover);
+  border-color: var(--hover);
 }

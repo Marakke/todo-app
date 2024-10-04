@@ -24,14 +24,15 @@ const Todo = ({ todo }) => {
   return (
     <div>
       <div
-        className={`inline-block px-8 py-2 border border-slate-700 cursor-pointer ${
+        className={`inline-block px-4 py-2 border border-slate-700 cursor-pointer todo ${
           todo.completed ? 'line-through text-white' : ''
         }`}
         onClick={handleUpdate}
       >
-        {todo.completed ? '✅' : ''} {todo.content}
+        {todo.content}
       </div>
-      <button onClick={handleDelete}>🗑️</button>
+      <button className="ml-2.5" onClick={handleUpdate}>{todo.completed ? '❎' : '✅'}</button>
+      <button className="ml-2.5" onClick={handleDelete}>❌</button>
     </div>
   );
 };

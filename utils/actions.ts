@@ -11,7 +11,7 @@ export const newTodo = async (data: FormData) => {
         content: newTodo,
       },
     });
-    revalidatePath('/todos');
+    revalidatePath('/');
   };
 };
 
@@ -22,7 +22,7 @@ export const completeTodo = async (id: string) => {
       completed: true,
     },
   });
-  revalidatePath('/todos');
+  revalidatePath('/');
 };
 
 export const uncompleteTodo = async (id: string) => {
@@ -32,12 +32,12 @@ export const uncompleteTodo = async (id: string) => {
       completed: false,
     },
   });
-  revalidatePath('/todos');
+  revalidatePath('/');
 };
 
 export const deleteTodo = async (id: string) => {
   await db.todo.delete({
     where: { id },
   });
-  revalidatePath('/todos');
+  revalidatePath('/');
 };

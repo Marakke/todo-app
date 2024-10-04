@@ -1,3 +1,9 @@
-export default function Loading() {
-  return <p>Loading...</p>
-}
+'use client';
+
+const loading = () => {
+  return (
+    <div>Loading...</div>
+  );
+};
+
+export default loading;
