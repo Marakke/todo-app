@@ -1,3 +1,3 @@
-## Full Stack Demo Project
+## TODO App
 
-This is a demo project showcasing my full stack skills.
+A lightweight app where you can add/complete/uncomplete/remove TODOs. The app is built with Next.js and hosted in Vercel.
